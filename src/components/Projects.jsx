@@ -50,7 +50,7 @@ export default function Projects() {
                     {project.title}
                   </h3>
                   {/* Description */}
-                  <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-slate-400 text-sm leading-relaxed">
                     {project.description}
                   </p>
                 </div>
