@@ -37,17 +37,38 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
       setIsSubmitting(true);
-      
-      // Simulate API submit delay
-      setTimeout(() => {
+      try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: JSON.stringify({
+            access_key: "1826cd5d-48b5-4b21-8baf-c42b732f1108",
+            name: formData.name,
+            email: formData.email,
+            message: formData.message
+          })
+        });
+
+        const result = await response.json();
+
+        if (response.status === 200 || result.success) {
+          setIsSuccess(true);
+          setFormData({ name: '', email: '', message: '' });
+        } else {
+          setErrors((prev) => ({ ...prev, submit: result.message || 'Something went wrong. Please try again.' }));
+        }
+      } catch (err) {
+        setErrors((prev) => ({ ...prev, submit: 'Network error. Please try again.' }));
+      } finally {
         setIsSubmitting(false);
-        setIsSuccess(true);
-        setFormData({ name: '', email: '', message: '' });
-      }, 1500);
+      }
     }
   };
 
@@ -200,6 +221,13 @@ export default function Contact() {
                       </p>
                     )}
                   </div>
+
+                  {errors.submit && (
+                    <p className="flex items-center space-x-1.5 text-xs text-rose-500 bg-rose-500/10 border border-rose-500/20 p-3 rounded-xl">
+                      <AlertCircle className="h-4 w-4 shrink-0" />
+                      <span>{errors.submit}</span>
+                    </p>
+                  )}
 
                   {/* Submit button */}
                   <button
