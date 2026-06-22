@@ -8,7 +8,7 @@ export const personalInfo = {
   email: "m.daniyalqureshi066@gmail.com",
   phone: "+91 8899775393",
   location: "Hyderabad, India",
-  resumeUrl: "/resume.pdf"
+  resumeUrl: "/resume.png"
 };
 
 export const socials = {
