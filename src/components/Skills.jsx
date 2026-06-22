@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Database, Terminal } from 'lucide-react';
+import { Globe, Database, Terminal, Monitor, Brain, BookOpen } from 'lucide-react';
 import { skillsMatrix } from '../data/portfolioData';
 
 export default function Skills() {
@@ -10,14 +10,29 @@ export default function Skills() {
       items: skillsMatrix.languages
     },
     {
-      title: 'Backend & Databases',
+      title: 'Backend Development',
       icon: <Database className="h-6 w-6 text-violet-400" />,
-      items: skillsMatrix.backendAndDatabases
+      items: skillsMatrix.backend
     },
     {
-      title: 'Developer Tools',
+      title: 'Databases & Tools',
       icon: <Terminal className="h-6 w-6 text-cyan-400" />,
-      items: skillsMatrix.developerTools
+      items: skillsMatrix.databasesAndTools
+    },
+    {
+      title: 'Frontend Technologies',
+      icon: <Monitor className="h-6 w-6 text-emerald-400" />,
+      items: skillsMatrix.frontend
+    },
+    {
+      title: 'AI / Data Tools',
+      icon: <Brain className="h-6 w-6 text-amber-400" />,
+      items: skillsMatrix.aiAndData
+    },
+    {
+      title: 'CS Fundamentals',
+      icon: <BookOpen className="h-6 w-6 text-rose-400" />,
+      items: skillsMatrix.fundamentals
     }
   ];
 

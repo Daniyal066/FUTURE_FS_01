@@ -6,8 +6,9 @@ export const personalInfo = {
   github: "https://github.com/Daniyal066",
   linkedin: "https://www.linkedin.com/in/mohammad-daniyal-qureshi-baa509316/",
   email: "m.daniyalqureshi066@gmail.com",
+  phone: "+91 8899775393",
   location: "Hyderabad, India",
-  resumeUrl: "#"
+  resumeUrl: "/resume.pdf"
 };
 
 export const socials = {
@@ -22,7 +23,8 @@ export const educationTimeline = [
     institution: "VNR Vignana Jyothi Institute of Engineering and Technology (VNR VJIET)",
     location: "Hyderabad, Telangana",
     duration: "2024 - 2028",
-    description: "Focusing on core computer science disciplines, database engineering, robust software architecture, and business system integration."
+    description: "Focusing on core computer science disciplines, database engineering, robust software architecture, and business system integration.",
+    icon: "graduation-cap"
   },
   {
     id: 2,
@@ -30,15 +32,38 @@ export const educationTimeline = [
     institution: "St. Joseph Higher Secondary School",
     location: "Baramulla, Kashmir",
     duration: "2022 - 2024",
-    description: "Completed core higher secondary curriculum with a strong focus on mathematics, science, and fundamental analytical skills."
+    description: "Completed core higher secondary curriculum with a strong focus on mathematics, science, and fundamental analytical skills.",
+    icon: "school"
   }
 ];
 
 export const skillsMatrix = {
-  languages: ["Java", "Python", "SQL", "JavaScript", "C"],
-  backendAndDatabases: ["Node.js", "Express", "FastAPI", "PostgreSQL", "MongoDB", "MySQL"],
-  developerTools: ["Docker", "Git", "GitHub"]
+  languages: ["Java", "Python", "JavaScript", "SQL", "R"],
+  backend: ["Node.js", "Express.js", "FastAPI", "REST APIs"],
+  databasesAndTools: ["MySQL", "MongoDB", "Redis", "Git", "GitHub", "Docker"],
+  frontend: ["HTML", "CSS", "React.js", "Vite", "Tailwind CSS"],
+  aiAndData: ["Machine Learning", "Pandas", "NumPy", "Tableau"],
+  fundamentals: ["Data Structures & Algorithms", "OOP", "DBMS", "Operating Systems"]
 };
+
+export const certifications = [
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services"
+  },
+  {
+    title: "Data Structures & Algorithms in Java",
+    issuer: "Apna College"
+  },
+  {
+    title: "Full Stack Web Development",
+    issuer: "Apna College"
+  },
+  {
+    title: "Google Analytics Certification",
+    issuer: "Google"
+  }
+];
 
 export const projectsData = [
   {

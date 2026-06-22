@@ -1,6 +1,6 @@
 import React from 'react';
-import { GraduationCap, School, BookOpen } from 'lucide-react';
-import { educationTimeline } from '../data/portfolioData';
+import { GraduationCap, School, BookOpen, Award } from 'lucide-react';
+import { educationTimeline, certifications } from '../data/portfolioData';
 
 export default function About() {
   const getIcon = (iconName) => {
@@ -77,6 +77,31 @@ export default function About() {
             })}
           </div>
 
+        </div>
+
+        {/* Certifications Section */}
+        <div className="mt-24 max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-white">Certifications</h3>
+            <div className="w-8 h-0.5 bg-indigo-500 mx-auto mt-3 rounded-full"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {certifications.map((cert) => (
+              <div 
+                key={cert.title}
+                className="p-5 bg-slate-900/40 border border-slate-800/80 backdrop-blur-md rounded-xl flex items-start space-x-4 hover:border-indigo-500/30 transition-all duration-300"
+              >
+                <div className="p-2.5 bg-slate-950 rounded-lg text-indigo-400">
+                  <Award className="h-6 w-6" />
+                </div>
+                <div>
+                  <h4 className="text-base font-bold text-white leading-snug">{cert.title}</h4>
+                  <p className="text-sm text-slate-400 mt-1">{cert.issuer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>
